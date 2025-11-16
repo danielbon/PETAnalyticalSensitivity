@@ -1,0 +1,78 @@
+#
+# run "Gate -a [crystal,BGO][axial_pos,0] mainMacro-PointSource.mac > output/PointSource/BGO/0/output.txt"
+# options for crystal are BGO, LYSO-Proteus, BGO_BaF2_15 and BGO_BaF2_20, which also select digitizer parameters, as the the energy resolution at 511 keV (e.g. 0.11 for LYSO and 0.185 for BGO).
+# axis_pos is any value in mm (e.g. -25 or 0)
+#
+# == ALIAS
+#/control/alias crystal BGO_BaF2_25
+#/control/alias crystal BGO
+#/control/alias crystal BGO_EJ232_15
+#/control/alias axial_pos 0
+#/control/alias acq_time 1
+# == VISUALIZATION AND VERBOSE
+/control/execute mac/verbose.mac
+
+# == WORLD
+/gate/geometry/setMaterialDatabase    input/GateMaterials.db
+/gate/world/geometry/setXLength 300. cm
+/gate/world/geometry/setYLength 300. cm
+/gate/world/geometry/setZLength 300. cm
+/gate/world/setMaterial G4_AIR
+/gate/world/vis/forceWireframe
+#/gate/world/daughters/insert 3axes
+#/gate/world/vis/setVisible 0
+
+# == PET SCANNER
+/control/execute mac/cylindricalPETBGOpy.mac
+
+# == PHANTOM
+#/control/execute mac/phantom_nema.mac
+#/control/execute mac/phantom_necr.mac
+/control/execute mac/phantom_box.mac
+#/control/execute mac/phantom_brain.mac
+
+# == PHYSICS and CUTS
+/control/execute mac/physics.mac
+
+# == DIGITIZER
+/control/execute mac/digitizernewBGO.mac
+
+# == OUTPUT
+/control/execute mac/output-PointSource.mac
+
+/gate/run/initialize
+
+/vis/disable
+#/control/execute mac/visualization.mac
+
+#/vis/viewer/flush
+#/gate/geometry/rebuild
+#/vis/scene/add/volume
+#/vis/viewer/rebuild
+
+# == OPTICAL SURFACES
+#/control/execute mac/opticalsurfacespy.mac
+
+#/geometry/test/run
+
+# == SOURCE
+#/control/execute mac/source_nema.mac
+#/control/execute mac/source_necr.mac
+/control/execute mac/source_ionNa22.mac
+#/control/execute mac/source_ionLu176.mac
+#/control/execute mac/source_ion{crystal}.mac
+#/control/execute mac/two_gamma_backtoback.mac
+#/control/execute mac/two_gamma_backtobacknew.mac
+#/control/execute mac/source_lesion.mac
+#/control/execute mac/source_brain_voxel.mac
+/gate/source/list
+
+/gate/systems/cylindricalPET/describe
+
+# == START ACQUISITION
+/gate/random/setEngineName MersenneTwister
+/gate/random/setEngineSeed auto
+/gate/application/setTimeSlice 10. s
+/gate/application/setTimeStart 0. s
+/gate/application/setTimeStop  10. s
+/gate/application/startDAQ

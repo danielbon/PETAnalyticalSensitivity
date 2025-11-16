@@ -1,0 +1,72 @@
+
+#/vis/viewer/set/style solid
+/gate/world/daughters/name micro_derenzo
+/gate/world/daughters/insert cylinder
+/gate/micro_derenzo/setMaterial Water
+/gate/micro_derenzo/geometry/setRmax 108 mm
+/gate/micro_derenzo/geometry/setRmin 0 mm
+/gate/micro_derenzo/geometry/setHeight 186. mm
+/gate/micro_derenzo/attachPhantomSD
+/gate/micro_derenzo/vis/setColor grey
+/gate/micro_derenzo/vis/setVisible 1 
+
+/gate/micro_derenzo/daughters/name sphere1
+/gate/micro_derenzo/daughters/insert sphere
+/gate/sphere1/setMaterial Water
+/gate/sphere1/geometry/setRmax 4.75 mm
+/gate/sphere1/geometry/setRmin 0 mm
+/gate/sphere1/placement/setTranslation 0 54 0 mm
+/gate/sphere1/vis/setColor green
+/gate/sphere1/attachPhantomSD
+
+
+/gate/micro_derenzo/daughters/name sphere2
+/gate/micro_derenzo/daughters/insert sphere
+/gate/sphere2/setMaterial Water
+/gate/sphere2/geometry/setRmax 6.35 mm
+/gate/sphere2/geometry/setRmin 0 mm
+/gate/sphere2/placement/setTranslation 46.765 27 0 mm
+/gate/sphere2/vis/setColor green
+/gate/sphere2/attachPhantomSD
+
+
+/gate/micro_derenzo/daughters/name sphere3
+/gate/micro_derenzo/daughters/insert sphere
+/gate/sphere3/setMaterial Water
+/gate/sphere3/geometry/setRmax 7.95 mm
+/gate/sphere3/geometry/setRmin 0 mm
+/gate/sphere3/placement/setTranslation 46.765 -27 0 mm
+/gate/sphere3/vis/setColor green
+/gate/sphere3/attachPhantomSD
+
+
+/gate/micro_derenzo/daughters/name sphere4
+/gate/micro_derenzo/daughters/insert sphere
+/gate/sphere4/setMaterial Water
+/gate/sphere4/geometry/setRmax 9.55 mm
+/gate/sphere4/geometry/setRmin 0 mm
+/gate/sphere4/placement/setTranslation 0 -54 0 mm
+/gate/sphere4/vis/setColor green
+/gate/sphere4/attachPhantomSD
+
+
+/gate/micro_derenzo/daughters/name sphere5
+/gate/micro_derenzo/daughters/insert sphere
+/gate/sphere5/setMaterial Water
+/gate/sphere5/geometry/setRmax 12.7 mm
+/gate/sphere5/geometry/setRmin 0 mm
+/gate/sphere5/placement/setTranslation -46.765 -27 0 mm
+/gate/sphere5/vis/setColor green
+/gate/sphere5/attachPhantomSD
+
+/gate/micro_derenzo/daughters/name sphere6
+/gate/micro_derenzo/daughters/insert sphere
+/gate/sphere6/setMaterial Water
+/gate/sphere6/geometry/setRmax 15.9 mm
+/gate/sphere6/geometry/setRmin 0 mm
+/gate/sphere6/placement/setTranslation -46.765 27 0 mm
+/gate/sphere6/vis/setColor green
+/gate/sphere6/attachPhantomSD
+
+
+

@@ -1,0 +1,17 @@
+#lung lesion defined as a spherical source
+/gate/source/addSource tumor
+/gate/source/tumor/setActivity 10000. becquerel
+/gate/source/tumor/setType backtoback
+/gate/source/tumor/gps/particle gamma
+/gate/source/tumor/setForcedUnstableFlag true
+/gate/source/tumor/setForcedHalfLife 6586.2 s
+/gate/source/tumor/gps/energytype Mono
+/gate/source/tumor/gps/monoenergy 0.511 MeV
+/gate/source/tumor/gps/type Volume
+/gate/source/tumor/gps/shape Sphere
+/gate/source/tumor/gps/radius 2 mm
+/gate/source/tumor/gps/angtype iso
+/gate/source/tumor/gps/centre -1.0 -1.0 -4.0 mm
+/gate/source/tumor/gps/confine NULL
+/gate/source/tumor/dump 1
+/gate/source/list

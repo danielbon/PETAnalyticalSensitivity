@@ -1,0 +1,122 @@
+
+
+/gate/source/addSource sBackGround
+/gate/source/sBackGround/setType backtoback
+/gate/source/sBackGround/gps/particle gamma
+/gate/source/sBackGround/gps/energytype Mono
+/gate/source/sBackGround/gps/monoenergy 511 keV
+/gate/source/sBackGround/gps/angtype iso
+/gate/source/sBackGround/gps/type Volume
+/gate/source/sBackGround/gps/shape Cylinder
+/gate/source/sBackGround/gps/radius 108 mm
+/gate/source/sBackGround/gps/halfz 46.5 mm
+/gate/source/sBackGround/setActivity 42598111.43 Bq
+/gate/source/sBackGround/setForcedUnstableFlag true
+/gate/source/sBackGround/setForcedHalfLife 6586.2 s
+/gate/source/sBackGround/gps/centre 0 0 0 mm
+/gate/source/sBackGround/gps/Forbid sphere1
+/gate/source/sBackGround/gps/Forbid sphere2
+/gate/source/sBackGround/gps/Forbid sphere3
+/gate/source/sBackGround/gps/Forbid sphere4
+/gate/source/sBackGround/gps/Forbid sphere5
+/gate/source/sBackGround/gps/Forbid sphere6
+/gate/source/sBackGround/dump 1
+/gate/source/list
+
+
+
+/gate/source/addSource s151
+/gate/source/s151/setType backtoback
+/gate/source/s151/gps/particle gamma
+/gate/source/s151/gps/energytype Mono
+/gate/source/s151/gps/monoenergy 511 keV
+/gate/source/s151/gps/angtype iso
+/gate/source/s151/gps/type Volume
+/gate/source/s151/gps/shape Sphere
+/gate/source/s151/gps/radius 4.75 mm
+/gate/source/s151/setActivity 22446 Bq
+/gate/source/s151/setForcedUnstableFlag true
+/gate/source/s151/setForcedHalfLife 6586.2 s
+/gate/source/s151/gps/centre 0 54 0 mm
+/gate/source/list
+
+
+/gate/source/addSource s152
+/gate/source/s152/setType backtoback
+/gate/source/s152/gps/particle gamma
+/gate/source/s152/gps/energytype Mono
+/gate/source/s152/gps/monoenergy 511 keV
+/gate/source/s152/gps/angtype iso
+/gate/source/s152/gps/type Volume
+/gate/source/s152/gps/shape Sphere
+/gate/source/s152/gps/radius 6.35 mm
+/gate/source/s152/setActivity 53626.5 Bq
+/gate/source/s152/setForcedUnstableFlag true
+/gate/source/s152/setForcedHalfLife 6586.2 s
+/gate/source/s152/gps/centre 46.765 27 0 mm
+/gate/source/list
+
+
+/gate/source/addSource s153
+/gate/source/s153/setType backtoback
+/gate/source/s153/gps/particle gamma
+/gate/source/s153/gps/energytype Mono
+/gate/source/s153/gps/monoenergy 511 keV
+/gate/source/s153/gps/angtype iso
+/gate/source/s153/gps/type Volume
+/gate/source/s153/gps/shape Sphere
+/gate/source/s153/gps/radius 7.95 mm
+/gate/source/s153/setActivity 105234.95 Bq
+/gate/source/s153/setForcedUnstableFlag true
+/gate/source/s153/setForcedHalfLife 6586.2 s
+/gate/source/s153/gps/centre 46.765 -27 0 mm
+/gate/source/list
+
+
+/gate/source/addSource s154
+/gate/source/s154/setType backtoback
+/gate/source/s154/gps/particle gamma
+/gate/source/s154/gps/energytype Mono
+/gate/source/s154/gps/monoenergy 511 keV
+/gate/source/s154/gps/angtype iso
+/gate/source/s154/gps/type Volume
+/gate/source/s154/gps/shape Sphere
+/gate/source/s154/gps/radius 9.55 mm
+/gate/source/s154/setActivity 182418.4 Bq
+/gate/source/s154/setForcedUnstableFlag true
+/gate/source/s154/setForcedHalfLife 6586.2 s
+/gate/source/s154/gps/centre 0 -54 0 mm
+/gate/source/list
+
+
+
+/gate/source/addSource s155
+/gate/source/s155/setType backtoback
+/gate/source/s155/gps/particle gamma
+/gate/source/s155/gps/energytype Mono
+/gate/source/s155/gps/monoenergy 511 keV
+/gate/source/s155/gps/angtype iso
+/gate/source/s155/gps/type Volume
+/gate/source/s155/gps/shape Sphere
+/gate/source/s155/gps/radius 12.7 mm
+/gate/source/s155/setActivity 429012.3 Bq
+/gate/source/s155/setForcedUnstableFlag true
+/gate/source/s155/setForcedHalfLife 6586.2 s
+/gate/source/s155/gps/centre -46.765 -27 0 mm
+/gate/source/list
+
+/gate/source/addSource s156
+/gate/source/s156/setType backtoback
+/gate/source/s156/gps/particle gamma
+/gate/source/s156/gps/energytype Mono
+/gate/source/s156/gps/monoenergy 511 keV
+/gate/source/s156/gps/angtype iso
+/gate/source/s156/gps/type Volume
+/gate/source/s156/gps/shape Sphere
+/gate/source/s156/gps/radius 15.9 mm
+/gate/source/s156/setActivity 841879.6 Bq
+/gate/source/s156/setForcedUnstableFlag true
+/gate/source/s156/setForcedHalfLife 6586.2 s
+/gate/source/s156/gps/centre -46.765 27 0 mm
+/gate/source/list
+

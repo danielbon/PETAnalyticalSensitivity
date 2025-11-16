@@ -1,0 +1,34 @@
+
+# === surfaces ===
+/gate/crystal/surfaces/name              crystal_module
+/gate/crystal/surfaces/insert            module
+#CrystalSurface (PTFE_wrapped or Air or smooth)
+/gate/crystal/surfaces/crystal_module/setSurface PTFE_wrapped
+
+/gate/crystal/surfaces/name              optcoupsurf
+/gate/crystal/surfaces/insert            OpticalCoupling
+/gate/crystal/surfaces/optcoupsurf/setSurface smooth
+
+/gate/OpticalCoupling/surfaces/name              crystalbacksurf
+/gate/OpticalCoupling/surfaces/insert            crystal
+/gate/OpticalCoupling/surfaces/crystalbacksurf/setSurface smooth
+
+/gate/OpticalCoupling/surfaces/name              SiPMCoversurf
+/gate/OpticalCoupling/surfaces/insert            SiPMCover
+/gate/OpticalCoupling/surfaces/SiPMCoversurf/setSurface smooth
+
+/gate/OpticalCoupling/surfaces/name              lateralsurf
+/gate/OpticalCoupling/surfaces/insert            module
+/gate/OpticalCoupling/surfaces/lateralsurf/setSurface smooth
+
+/gate/SiPMCover/surfaces/name              SiPMCoverbacksurf
+/gate/SiPMCover/surfaces/insert            OpticalCoupling
+/gate/SiPMCover/surfaces/SiPMCoverbacksurf/setSurface smooth
+
+/gate/SiPMCover/surfaces/name              lateralsurf
+/gate/SiPMCover/surfaces/insert            module
+/gate/SiPMCover/surfaces/lateralsurf/setSurface smooth
+
+/gate/SiPMCover/surfaces/name              SiPMsurf
+/gate/SiPMCover/surfaces/insert            SiPM
+/gate/SiPMCover/surfaces/SiPMsurf/setSurface SiPM

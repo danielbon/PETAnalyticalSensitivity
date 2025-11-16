@@ -1,0 +1,84 @@
+# == DIGITIZER              ==
+
+#Chain for Singles without optical processes
+/gate/digitizer/name Singles
+#/gate/digitizer/insert singleChain
+#/gate/digitizer/Singles/setInputName Singles
+/gate/digitizer/Singles/insert adder
+/gate/digitizer/Singles/insert readout
+/gate/digitizer/Singles/readout/setPolicy TakeEnergyWinner 
+/gate/digitizer/Singles/readout/setDepth 2
+
+/gate/digitizer/Singles/insert blurring
+/gate/digitizer/Singles/blurring/setResolution 0.13
+/gate/digitizer/Singles/blurring/setEnergyOfReference 511. keV
+#/gate/digitizer/Singles/blurring/setLaw inverseSquare
+#/gate/digitizer/Singles/blurring/inverseSquare/setResolution 0.20
+#/gate/digitizer/Singles/blurring/inverseSquare/setEnergyOfReference 511. keV
+
+/gate/digitizer/Singles/insert timeResolution
+/gate/digitizer/Singles/timeResolution/setTimeResolution 71. ps
+
+# PILES-UP
+/gate/digitizer/Singles/insert pileup 
+/gate/digitizer/Singles/pileup/setDepth 4
+/gate/digitizer/Singles/pileup/setPileup 590 ns
+
+# DEADTIME
+/gate/digitizer/Singles/insert deadtime  
+/gate/digitizer/Singles/deadtime/setDeadTime 590 ns
+/gate/digitizer/Singles/deadtime/setMode paralysable
+/gate/digitizer/Singles/deadtime/chooseDTVolume crystal
+
+/gate/digitizer/name Singles300
+/gate/digitizer/insert singleChain
+/gate/digitizer/Singles300/setInputName Singles
+/gate/digitizer/Singles300/insert thresholder
+/gate/digitizer/Singles300/thresholder/setThreshold 350. keV
+/gate/digitizer/Singles300/insert upholder
+/gate/digitizer/Singles300/upholder/setUphold 650. keV
+
+/gate/digitizer/Coincidences/setInputName Singles300
+/gate/digitizer/Coincidences/setWindow 2. ns
+/gate/digitizer/Coincidences/minSectorDifference 5
+/gate/digitizer/Coincidences/setOffset 0. ns
+/gate/digitizer/Coincidences/setDepth 1
+/gate/digitizer/Coincidences/MultiplesPolicy takeAllGoods
+/gate/digitizer/Coincidences/describe
+##Uncomment for second method for coincidence sorting
+/gate/digitizer/Coincidences/allPulseOpenCoincGate true
+
+/gate/digitizer/name Delay
+/gate/digitizer/insert coincidenceSorter
+/gate/digitizer/Delay/setInputName Singles300
+/gate/digitizer/Delay/setWindow 2. ns
+/gate/digitizer/Delay/setOffset 100.0 ns
+/gate/digitizer/Delay/setDepth 1
+/gate/digitizer/Delay/minSectorDifference 5
+/gate/digitizer/Delay/MultiplesPolicy takeAllGoods
+##Uncomment for second method for coincidence sorting
+/gate/digitizer/Delay/allPulseOpenCoincGate true
+
+/gate/digitizer/name CoincidencesnoEW
+/gate/digitizer/insert coincidenceSorter
+/gate/digitizer/CoincidencesnoEW/setInputName Singles
+/gate/digitizer/CoincidencesnoEW/setWindow 2. ns
+/gate/digitizer/CoincidencesnoEW/minSectorDifference 5
+/gate/digitizer/CoincidencesnoEW/setOffset 0. ns
+/gate/digitizer/CoincidencesnoEW/setDepth 1
+/gate/digitizer/CoincidencesnoEW/MultiplesPolicy takeAllGoods
+/gate/digitizer/CoincidencesnoEW/describe
+##Uncomment for second method for coincidence sorting
+/gate/digitizer/CoincidencesnoEW/allPulseOpenCoincGate true
+
+/gate/digitizer/name DelaynoEW
+/gate/digitizer/insert coincidenceSorter
+/gate/digitizer/DelaynoEW/setInputName Singles
+/gate/digitizer/DelaynoEW/setWindow 2. ns
+/gate/digitizer/DelaynoEW/setOffset 100.0 ns
+/gate/digitizer/DelaynoEW/setDepth 1
+/gate/digitizer/DelaynoEW/minSectorDifference 5
+/gate/digitizer/DelaynoEW/MultiplesPolicy takeAllGoods
+##Uncomment for second method for coincidence sorting
+/gate/digitizer/DelaynoEW/allPulseOpenCoincGate true
+

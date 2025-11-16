@@ -1,0 +1,32 @@
+
+# Source cylinder
+
+/gate/source/addSource                      source
+/gate/source/source/gps/particle            e+
+/gate/source/source/gps/energytype          Fluor18
+/gate/source/source/gps/angtype             iso
+/gate/source/source/gps/type                Volume
+/gate/source/source/gps/shape               Cylinder
+/gate/source/source/setForcedUnstableFlag   true
+/gate/source/source/gps/radius              1.6 mm
+/gate/source/source/gps/halfz               0.4 cm
+/gate/source/source/setForcedHalfLife       6586.0 s
+/gate/source/source/gps/centre              0.0 0.0 0.0 cm
+/gate/source/source/setActivity             1 MBq
+
+
+/gate/source/addSource                      bgsource
+/gate/source/bgsource/gps/particle            e+
+/gate/source/bgsource/gps/energytype          Fluor18
+/gate/source/bgsource/gps/angtype             iso
+/gate/source/bgsource/gps/type                Volume
+/gate/source/bgsource/gps/shape               Cylinder
+/gate/source/bgsource/setForcedUnstableFlag   true
+/gate/source/bgsource/gps/confine linearSourceOut
+/gate/source/bgsource/gps/radius              2.5 mm
+/gate/source/bgsource/gps/halfz               0.4 cm
+/gate/source/bgsource/setForcedHalfLife       6586.0 s
+/gate/source/bgsource/gps/centre              0.0 0.0 0.0 cm
+/gate/source/bgsource/setActivity             0.250 MBq
+
+

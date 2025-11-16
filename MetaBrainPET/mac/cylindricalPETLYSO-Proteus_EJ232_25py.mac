@@ -1,0 +1,152 @@
+# This macro describes a PET scanner based on pixelated crystal detector blocks
+# each block consists of an array of 8 x 8 elements with 3.0x2.9 x 25.0 mm3 crystal coupled to a SiPM array
+# of 8 x 8 elements with 2.9 x 2.9 mm2 each one.
+# The distance from the center of the field of view to the crystal surface is 145.0 mm.
+
+#### Using cylindricalPET system ####
+/gate/world/daughters/name cylindricalPET
+/gate/world/daughters/insert cylinder
+/gate/cylindricalPET/setMaterial G4_AIR
+/gate/cylindricalPET/placement/setTranslation  0.0 0.0 0.0 mm
+/gate/cylindricalPET/geometry/setRmax 190.0 mm
+/gate/cylindricalPET/geometry/setRmin 143.0 mm
+/gate/cylindricalPET/geometry/setHeight 175.8 mm
+/gate/cylindricalPET/vis/forceWireframe 1
+/gate/cylindricalPET/vis/setVisible 0
+
+/gate/cylindricalPET/daughters/name rsector
+/gate/cylindricalPET/daughters/insert box
+/gate/rsector/placement/setTranslation 157.5 0. 0. mm
+/gate/rsector/geometry/setXLength 29.0 mm
+/gate/rsector/geometry/setYLength 29.4 mm
+/gate/rsector/geometry/setZLength 175.8 mm
+/gate/rsector/setMaterial G4_AIR
+/gate/rsector/vis/forceWireframe 1
+/gate/rsector/vis/setVisible 0
+
+/gate/rsector/daughters/name module
+/gate/rsector/daughters/insert box
+/gate/module/geometry/setXLength 29.0 mm
+/gate/module/geometry/setYLength 29.4 mm
+/gate/module/geometry/setZLength 29.3 mm
+/gate/module/setMaterial PTFE
+/gate/module/vis/forceWireframe
+/gate/module/vis/setVisible 0
+
+/gate/module/daughters/name crystal
+/gate/module/daughters/insert box
+/gate/crystal/geometry/setXLength 25.0 mm
+/gate/crystal/geometry/setYLength 3.0 mm
+/gate/crystal/geometry/setZLength 2.9 mm
+/gate/crystal/setMaterial G4_AIR
+/gate/crystal/placement/setTranslation    0. 0. 0. mm
+/gate/crystal/vis/setColor blue
+/gate/crystal/vis/setVisible 0
+
+# LYSO-Proteus layer {Setting the dimensions of each crystal layer}
+/gate/crystal/daughters/name LYSO-Proteus
+/gate/crystal/daughters/insert box
+/gate/LYSO-Proteus/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/LYSO-Proteus/geometry/setXLength 25.0 mm
+/gate/LYSO-Proteus/geometry/setYLength 3.0 mm
+/gate/LYSO-Proteus/geometry/setZLength 0.3 mm
+/gate/LYSO-Proteus/setMaterial LYSO-Proteus
+/gate/LYSO-Proteus/vis/forceWireframe
+/gate/LYSO-Proteus/vis/setColor green
+/gate/LYSO-Proteus/repeaters/insert cubicArray
+/gate/LYSO-Proteus/cubicArray/setRepeatNumberX 1
+/gate/LYSO-Proteus/cubicArray/setRepeatNumberY 1
+/gate/LYSO-Proteus/cubicArray/setRepeatNumberZ 7
+/gate/LYSO-Proteus/cubicArray/setRepeatVector 0. 0. 0.4 mm
+/gate/LYSO-Proteus/vis/setVisible 1
+
+# EJ232 layer {Setting the dimensions of each crystal layer}
+/gate/crystal/daughters/name EJ232
+/gate/crystal/daughters/insert box
+/gate/EJ232/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/EJ232/geometry/setXLength 25.0 mm
+/gate/EJ232/geometry/setYLength 3.0 mm
+/gate/EJ232/geometry/setZLength 0.1 mm
+/gate/EJ232/setMaterial EJ232
+/gate/EJ232/vis/forceWireframe
+/gate/EJ232/vis/setColor red
+/gate/EJ232/repeaters/insert cubicArray
+/gate/EJ232/cubicArray/setRepeatNumberX 1
+/gate/EJ232/cubicArray/setRepeatNumberY 1
+/gate/EJ232/cubicArray/setRepeatNumberZ 8
+/gate/EJ232/cubicArray/setRepeatVector 0. 0. 0.4 mm
+/gate/EJ232/vis/setVisible 1
+
+# === Optical coupling ===
+/gate/module/daughters/name OpticalCoupling
+/gate/module/daughters/insert box
+/gate/OpticalCoupling/geometry/setXLength 0.01 mm
+/gate/OpticalCoupling/geometry/setYLength 28.2 mm
+/gate/OpticalCoupling/geometry/setZLength 28.1 mm
+/gate/OpticalCoupling/setMaterial BC-630
+/gate/OpticalCoupling/vis/setColor yellow
+/gate/OpticalCoupling/placement/setTranslation 12.505 0. 0.  mm
+/gate/OpticalCoupling/vis/setVisible 0
+
+# === SiPM cover window ===
+/gate/module/daughters/name SiPMCover
+/gate/module/daughters/insert box
+/gate/SiPMCover/geometry/setXLength 0.26 mm
+/gate/SiPMCover/geometry/setYLength 3.0 mm
+/gate/SiPMCover/geometry/setZLength 2.9 mm
+/gate/SiPMCover/setMaterial Epoxy
+/gate/SiPMCover/vis/setColor blue
+/gate/SiPMCover/placement/setTranslation 12.64 0. 0.  mm
+/gate/SiPMCover/repeaters/insert              cubicArray
+/gate/SiPMCover/cubicArray/setRepeatNumberX   1
+/gate/SiPMCover/cubicArray/setRepeatNumberY 8
+/gate/SiPMCover/cubicArray/setRepeatNumberZ 8
+/gate/SiPMCover/cubicArray/setRepeatVector 0 3.6 3.6 mm
+/gate/SiPMCover/vis/setVisible 0
+
+# === SiPM ===
+/gate/module/daughters/name             SiPM
+/gate/module/daughters/insert           box
+/gate/SiPM/geometry/setXLength 0.4 mm
+/gate/SiPM/geometry/setYLength 3.0 mm
+/gate/SiPM/geometry/setZLength 2.9 mm
+/gate/SiPM/setMaterial                   Silicon
+/gate/SiPM/vis/setColor                  red
+/gate/SiPM/placement/setTranslation 12.97 0. 0.  mm
+/gate/SiPM/repeaters/insert              cubicArray
+/gate/SiPM/cubicArray/setRepeatNumberX   1
+/gate/SiPM/cubicArray/setRepeatNumberY 8
+/gate/SiPM/cubicArray/setRepeatNumberZ 8
+/gate/SiPM/cubicArray/setRepeatVector 0. 3.6 3.6 mm
+/gate/SiPM/vis/setVisible 0
+
+/gate/crystal/repeaters/insert              cubicArray
+/gate/crystal/cubicArray/setRepeatNumberX   1
+/gate/crystal/cubicArray/setRepeatNumberY 8
+/gate/crystal/cubicArray/setRepeatNumberZ 8
+/gate/crystal/cubicArray/setRepeatVector 0 3.6 3.6 mm
+
+/gate/module/repeaters/insert cubicArray
+/gate/module/cubicArray/setRepeatNumberX 1
+/gate/module/cubicArray/setRepeatNumberY 1
+/gate/module/cubicArray/setRepeatNumberZ 6
+/gate/module/cubicArray/setRepeatVector 0. 29.4 29.3 mm
+
+/gate/rsector/repeaters/insert ring
+/gate/rsector/ring/setRepeatNumber 30
+
+/gate/systems/cylindricalPET/rsector/attach rsector
+/gate/systems/cylindricalPET/module/attach module
+#/gate/systems/cylindricalPET/module/attach SiPMCover
+/gate/systems/cylindricalPET/crystal/attach crystal
+/gate/systems/cylindricalPET/layer0/attach LYSO-Proteus
+/gate/systems/cylindricalPET/layer1/attach EJ232
+
+# Attach CrystalSD
+/gate/LYSO-Proteus/attachCrystalSD
+/gate/EJ232/attachCrystalSD
+#/gate/crystal/attachCrystalSD
+#/gate/SiPMCover/attachCrystalSD
+
+/gate/systems/cylindricalPET/describe
+

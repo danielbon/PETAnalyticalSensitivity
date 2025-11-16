@@ -1,0 +1,26 @@
+/gate/source/addSource voxel_brain voxel
+/gate/source/voxel_brain/reader/insert image
+#/gate/source/voxel_brain/imageReader/translator/insert              linear
+#/gate/source/voxel_brain/imageReader/linearTranslator/setScale      1. Bq
+/gate/source/voxel_brain/imageReader/translator/insert range
+/gate/source/voxel_brain/imageReader/rangeTranslator/readTable input/activityRange_Brainweb_FDG.dat
+/gate/source/voxel_brain/imageReader/rangeTranslator/describe 1
+/gate/source/voxel_brain/imageReader/readFile input/subject04_crisp_v.mnc.mhd
+/gate/source/voxel_brain/imageReader/verbose                        1
+/gate/source/voxel_brain/setPosition -90.5 -108.5 -90.5 mm
+/gate/source/voxel_brain/dump 1
+/gate/source/voxel_brain/gps/particle            e+
+/gate/source/voxel_brain/gps/energytype          Fluor18
+/gate/source/voxel_brain/setType backtoback
+#/gate/source/voxel_brain/gps/particle gamma
+/gate/source/voxel_brain/setForcedUnstableFlag true
+/gate/source/voxel_brain/setForcedHalfLife 6586.2 s
+#/gate/source/voxel_brain/gps/ene/type Mono
+#/gate/source/voxel_brain/gps/ene/mono 0.511 MeV
+/gate/source/voxel_brain/gps/confine NULL
+/gate/source/voxel_brain/gps/ang/type iso
+/gate/source/voxel_brain/dump 1
+/gate/source/list
+
+
+

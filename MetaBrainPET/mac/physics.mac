@@ -1,0 +1,41 @@
+
+#/gate/physics/addPhysicsList emstandard_opt3
+#/gate/physics/addPhysicsList emstandard_opt4
+/gate/physics/addPhysicsList emlivermore_polar
+
+#/gate/physics/addProcess OpticalAbsorption
+#/gate/physics/addProcess OpticalRayleigh
+#/gate/physics/addProcess OpticalBoundary
+#/gate/physics/addProcess OpticalMie
+#/gate/physics/addProcess OpticalWLS
+#/gate/physics/addProcess Scintillation
+/gate/physics/addProcess RadioactiveDecay
+
+#/gate/physics/addAtomDeexcitation
+
+#/process/eLoss/binsPerDecade 20
+#/process/eLoss/StepFunction 0.2 0.1
+#/process/em/lowestElectronEnergy 1 keV
+#/process/msc/StepLimit UseSafetyPlus
+#/process/msc/RangeFactor 0.05
+#/process/msc/GeomFactor 2.5
+#/process/msc/Skin 1
+
+/gate/physics/processList Enabled
+/gate/physics/processList Initialized
+
+# CUTS
+
+/gate/physics/Gamma/SetCutInRegion      world  0.5 mm
+/gate/physics/Electron/SetCutInRegion   world  0.5 mm
+/gate/physics/Positron/SetCutInRegion   world  0.5 mm
+
+#/gate/physics/SetMaxStepSizeInRegion world  1.0 mm
+
+/gate/physics/Gamma/SetCutInRegion      crystal 0.01 mm
+/gate/physics/Electron/SetCutInRegion   crystal 0.01 mm
+/gate/physics/Positron/SetCutInRegion   crystal 0.01 mm
+
+#/gate/physics/SetMaxStepSizeInRegion    crystal 0.03 mm
+
+/gate/physics/displayCuts

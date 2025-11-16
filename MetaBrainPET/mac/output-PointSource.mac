@@ -1,0 +1,41 @@
+# == OUTPUT
+
+# === ASCII ===
+/gate/output/ascii/disable
+
+# === ROOT output ===
+/gate/output/root/enable
+/gate/output/root/setFileName output/PointSource/{crystal}/{axial_pos}/output
+/gate/output/root/setRootNtupleFlag 0
+/gate/output/root/setRootHitFlag 0
+/gate/output/root/setSaveRndmFlag 0
+/gate/output/root/setRootRecordFlag 0
+/gate/output/root/setRootSinglesFlag 1
+/gate/output/root/setRootCoincidencesFlag 1
+/gate/output/root/setRootDelayFlag 1
+#/gate/output/root/setRootSingles300Flag 1
+#/gate/output/root/setRootCoincidences300Flag 1
+#/gate/output/root/setRootDelay300Flag 1
+
+# == ACTOR
+/gate/actor/addActor   SimulationStatisticActor stat
+/gate/actor/stat/save  output/PointSource/{crystal}/{axial_pos}/stat.txt
+/gate/actor/stat/saveEveryNEvents 2000
+
+# Summary
+/gate/output/summary/enable
+/gate/output/summary/setFileName output/PointSource/{crystal}/{axial_pos}/summary.txt
+/gate/output/summary/addCollection Singles
+/gate/output/summary/addCollection Coincidences
+/gate/output/summary/addCollection Delay
+
+# Attenuation map
+/gate/actor/addActor MuMapActor getMuMap
+/gate/actor/getMuMap/attachTo world
+/gate/actor/getMuMap/save output/PointSource/{crystal}/{axial_pos}/MuMap.hdr
+/gate/actor/getMuMap/setPosition 0 0 0 mm
+/gate/actor/getMuMap/setVoxelSize 0.5 0.5 0.5 mm
+/gate/actor/getMuMap/setResolution 362 434 362
+/gate/actor/getMuMap/setEnergy 511 keV
+/gate/actor/getMuMap/setMuUnit 1  1/cm
+

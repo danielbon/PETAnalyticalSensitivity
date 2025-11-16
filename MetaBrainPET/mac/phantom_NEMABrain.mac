@@ -1,0 +1,94 @@
+
+/gate/world/daughters/name                      phantom_EXT
+/gate/world/daughters/insert                    cylinder
+/gate/phantom_EXT/setMaterial                   Polyethylene
+/gate/phantom_EXT/geometry/setRmax              69.5 mm
+/gate/phantom_EXT/geometry/setRmin              0 mm
+/gate/phantom_EXT/geometry/setHeight            113. mm
+/gate/phantom_EXT/placement/setTranslation      0.0 0.0 0.0 mm
+/gate/phantom_EXT/vis/setColor                  grey
+/gate/phantom_EXT/vis/setVisible                1 
+/gate/phantom_EXT/attachPhantomSD
+
+/gate/world/daughters/name                      phantom_INT
+/gate/world/daughters/insert                    cylinder
+/gate/phantom_INT/setMaterial                   Water
+/gate/phantom_INT/geometry/setRmax              67.5 mm
+/gate/phantom_INT/geometry/setRmin              0 mm
+/gate/phantom_INT/geometry/setHeight            103. mm
+/gate/phantom_INT/placement/setTranslation      0.0 0.0 0.0 mm
+/gate/phantom_INT/vis/setColor                  grey
+/gate/phantom_INT/vis/setVisible                1 
+/gate/phantom_INT/attachPhantomSD
+
+/gate/phantom_INT/daughters/name                hot_rod_1
+/gate/phantom_INT/daughters/insert              cylinder
+/gate/hot_rod_1/setMaterial                     Water
+/gate/hot_rod_1/geometry/setRmax                4.5 mm
+/gate/hot_rod_1/geometry/setRmin                0 mm
+/gate/hot_rod_1/geometry/setHeight              50. mm
+/gate/hot_rod_1/placement/setTranslation        35.0 0.0 28.0 mm
+/gate/hot_rod_1/vis/setColor                    grey
+/gate/hot_rod_1/vis/setVisible                  1 
+/gate/hot_rod_1/attachPhantomSD
+
+/gate/phantom_INT/daughters/name                hot_rod_2
+/gate/phantom_INT/daughters/insert              cylinder
+/gate/hot_rod_2/setMaterial                     Water
+/gate/hot_rod_2/geometry/setRmax                2.25 mm
+/gate/hot_rod_2/geometry/setRmin                0 mm
+/gate/hot_rod_2/geometry/setHeight              50. mm
+/gate/hot_rod_2/placement/setTranslation        17.5 30.31 28.0 mm
+/gate/hot_rod_2/vis/setColor                    grey
+/gate/hot_rod_2/vis/setVisible                  1 
+/gate/hot_rod_2/attachPhantomSD
+
+/gate/phantom_INT/daughters/name                hot_rod_3
+/gate/phantom_INT/daughters/insert              cylinder
+/gate/hot_rod_3/setMaterial                     G4_AIR
+/gate/hot_rod_3/geometry/setRmax                10.0 mm
+/gate/hot_rod_3/geometry/setRmin                0 mm
+/gate/hot_rod_3/geometry/setHeight              50. mm
+/gate/hot_rod_3/placement/setTranslation        -17.5 30.31 28.0 mm
+/gate/hot_rod_3/vis/setColor                    grey
+/gate/hot_rod_3/vis/setVisible                  1 
+/gate/hot_rod_3/attachPhantomSD
+
+/gate/phantom_INT/daughters/name                hot_rod_4
+/gate/phantom_INT/daughters/insert              cylinder
+/gate/hot_rod_4/setMaterial                     Water
+/gate/hot_rod_4/geometry/setRmax                3.0 mm
+/gate/hot_rod_4/geometry/setRmin                0 mm
+/gate/hot_rod_4/geometry/setHeight              50. mm
+/gate/hot_rod_4/placement/setTranslation        -35.0 0.0 28.0 mm
+/gate/hot_rod_4/vis/setColor                    grey
+/gate/hot_rod_4/vis/setVisible                  1 
+/gate/hot_rod_4/attachPhantomSD
+
+/gate/phantom_INT/daughters/name                hot_rod_5
+/gate/phantom_INT/daughters/insert              cylinder
+/gate/hot_rod_5/setMaterial                     Water
+/gate/hot_rod_5/geometry/setRmax                6.0 mm
+/gate/hot_rod_5/geometry/setRmin                0 mm
+/gate/hot_rod_5/geometry/setHeight              50. mm
+/gate/hot_rod_5/placement/setTranslation        -17.5 -30.31 28.0 mm
+/gate/hot_rod_5/vis/setColor                    grey
+/gate/hot_rod_5/vis/setVisible                  1 
+/gate/hot_rod_5/attachPhantomSD
+
+/gate/phantom_INT/daughters/name                hot_rod_6
+/gate/phantom_INT/daughters/insert              cylinder
+/gate/hot_rod_6/setMaterial                     Water
+/gate/hot_rod_6/geometry/setRmax                7.5 mm
+/gate/hot_rod_6/geometry/setRmin                0 mm
+/gate/hot_rod_6/geometry/setHeight              50. mm
+/gate/hot_rod_6/placement/setTranslation        17.5 -30.31 28.0 mm
+/gate/hot_rod_6/vis/setColor                    grey
+/gate/hot_rod_6/vis/setVisible                  1 
+/gate/hot_rod_6/attachPhantomSD
+
+
+
+
+
+

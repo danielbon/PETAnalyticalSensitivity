@@ -1,0 +1,116 @@
+#==================================================
+# PHANTOM
+#==================================================
+
+/gate/world/daughters/name                                      main_phantom
+/gate/world/daughters/insert                                    cylinder
+/gate/main_phantom/setMaterial                                  Polyethylene
+/gate/main_phantom/vis/setColor                                 white
+/gate/main_phantom/geometry/setRmin                             0 mm
+/gate/main_phantom/geometry/setRmax                             15 mm
+/gate/main_phantom/geometry/setHeight                           50 mm  
+/gate/main_phantom/placement/setTranslation                     0 0 0 mm
+/gate/main_phantom/vis/forceWireframe            
+/gate/main_phantom/attachPhantomSD            
+            
+/gate/world/daughters/name                                      upper_half
+/gate/world/daughters/insert                                    cylinder
+/gate/upper_half/setMaterial                                    Water
+/gate/upper_half/vis/setColor                                   white
+/gate/upper_half/geometry/setRmin                               0 mm
+/gate/upper_half/geometry/setRmax                               15 mm
+/gate/upper_half/geometry/setHeight                             30 mm   
+/gate/upper_half/placement/setTranslation                       0 0 10 mm
+/gate/upper_half/vis/forceWireframe
+/gate/upper_half/attachPhantomSD
+
+/gate/world/daughters/name                                     first_hollow_cylinder
+/gate/world/daughters/insert                                   cylinder
+/gate/first_hollow_cylinder/setMaterial                        Water
+/gate/first_hollow_cylinder/vis/setColor                       white
+/gate/first_hollow_cylinder/geometry/setRmin                   0 mm
+/gate/first_hollow_cylinder/geometry/setRmax                   4 mm
+/gate/first_hollow_cylinder/geometry/setHeight                 15 mm   
+/gate/first_hollow_cylinder/placement/setTranslation           7.5 0 17.5 mm
+/gate/first_hollow_cylinder/vis/forceSolid
+/gate/first_hollow_cylinder/attachPhantomSD
+
+/gate/world/daughters/name                                      second_hollow_cylinder
+/gate/world/daughters/insert                                    cylinder
+/gate/second_hollow_cylinder/setMaterial                        Air
+/gate/second_hollow_cylinder/vis/setColor                       white
+/gate/second_hollow_cylinder/geometry/setRmin                   0 mm
+/gate/second_hollow_cylinder/geometry/setRmax                   4 mm
+/gate/second_hollow_cylinder/geometry/setHeight                 15 mm   
+/gate/second_hollow_cylinder/placement/setTranslation           -7.5 0 17.5 mm
+/gate/second_hollow_cylinder/vis/forceSolid
+/gate/second_hollow_cylinder/attachPhantomSD
+
+/gate/world/daughters/name                                      lower_half
+/gate/world/daughters/insert                                    cylinder
+/gate/lower_half/setMaterial                                    Polyethylene
+/gate/lower_half/vis/setColor                                   white
+/gate/lower_half/geometry/setRmin                               0 mm
+/gate/lower_half/geometry/setRmax                               15 mm
+/gate/lower_half/geometry/setHeight                             20 mm   
+/gate/lower_half/placement/setTranslation                       0 0 -15 mm
+/gate/lower_half/vis/forceWireframe
+/gate/lower_half/attachPhantomSD
+
+/gate/world/daughters/name                                      hot_rod_1
+/gate/world/daughters/insert                                    cylinder
+/gate/hot_rod_1/setMaterial                                     Water
+/gate/hot_rod_1/vis/setColor                                    white
+/gate/hot_rod_1/geometry/setRmin                                0 mm
+/gate/hot_rod_1/geometry/setRmax                                0.5 mm
+/gate/hot_rod_1/geometry/setHeight                              20 mm   
+/gate/hot_rod_1/placement/setTranslation                        2.32 7.132 -15 mm
+/gate/hot_rod_1/vis/forceSolid
+/gate/hot_rod_1/attachPhantomSD
+
+/gate/world/daughters/name                                      hot_rod_2
+/gate/world/daughters/insert                                    cylinder
+/gate/hot_rod_2/setMaterial                                     Water
+/gate/hot_rod_2/vis/setColor                                    white
+/gate/hot_rod_2/geometry/setRmin                                0 mm
+/gate/hot_rod_2/geometry/setRmax                                1 mm
+/gate/hot_rod_2/geometry/setHeight                              20 mm   
+/gate/hot_rod_2/placement/setTranslation                        -4.41 6.067 -15 mm
+/gate/hot_rod_2/vis/forceSolid
+/gate/hot_rod_2/attachPhantomSD
+
+/gate/world/daughters/name                                      hot_rod_3
+/gate/world/daughters/insert                                    cylinder
+/gate/hot_rod_3/setMaterial                                     Water
+/gate/hot_rod_3/vis/setColor                                    white
+/gate/hot_rod_3/geometry/setRmin                                0 mm
+/gate/hot_rod_3/geometry/setRmax                                1.5 mm
+/gate/hot_rod_3/geometry/setHeight                              20 mm   
+/gate/hot_rod_3/placement/setTranslation                        -7.5 0 -15 mm
+/gate/hot_rod_3/vis/forceSolid
+/gate/hot_rod_3/attachPhantomSD
+
+/gate/world/daughters/name                                      hot_rod_4
+/gate/world/daughters/insert                                    cylinder
+/gate/hot_rod_4/setMaterial                                     Water
+/gate/hot_rod_4/vis/setColor                                    white
+/gate/hot_rod_4/geometry/setRmin                                0 mm
+/gate/hot_rod_4/geometry/setRmax                                2 mm
+/gate/hot_rod_4/geometry/setHeight                              20 mm   
+/gate/hot_rod_4/placement/setTranslation                        -4.41 -6.067 -15 mm
+/gate/hot_rod_4/vis/forceSolid
+/gate/hot_rod_4/attachPhantomSD
+
+/gate/world/daughters/name                                      hot_rod_5
+/gate/world/daughters/insert                                    cylinder
+/gate/hot_rod_5/setMaterial                                     Water
+/gate/hot_rod_5/vis/setColor                                    white
+/gate/hot_rod_5/geometry/setRmin                                0 mm
+/gate/hot_rod_5/geometry/setRmax                                2.5 mm
+/gate/hot_rod_5/geometry/setHeight                              20 mm   
+/gate/hot_rod_5/placement/setTranslation                        2.32 -7.132 -15 mm
+/gate/hot_rod_5/vis/forceSolid
+/gate/hot_rod_5/attachPhantomSD
+
+/gate/geometry/rebuild
+/gate/systems/cylindricalPET/describe

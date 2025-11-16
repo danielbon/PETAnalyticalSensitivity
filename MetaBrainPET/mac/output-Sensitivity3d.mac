@@ -1,0 +1,31 @@
+# == OUTPUT
+
+# === ASCII ===
+/gate/output/ascii/disable
+
+# === ROOT output ===
+/gate/output/root/enable
+/gate/output/root/setFileName output/Sensitivity3d/{crystal}/{x_pos};{axial_pos}/output
+/gate/output/root/setRootNtupleFlag 0
+/gate/output/root/setRootHitFlag 0
+/gate/output/root/setSaveRndmFlag 0
+/gate/output/root/setRootRecordFlag 0
+/gate/output/root/setRootSinglesFlag 0
+/gate/output/root/setRootCoincidencesFlag 1
+/gate/output/root/setRootDelayFlag 1
+/gate/output/root/setRootSingles300Flag 0
+/gate/output/root/setRootCoincidences300Flag 1
+/gate/output/root/setRootDelay300Flag 1
+
+# == ACTOR
+/gate/actor/addActor   SimulationStatisticActor stat
+/gate/actor/stat/save  output/Sensitivity3d/{crystal}/{x_pos};{axial_pos}/stat.txt
+/gate/actor/stat/saveEveryNEvents 2000
+
+# Summary
+/gate/output/summary/enable
+/gate/output/summary/setFileName output/Sensitivity3d/{crystal}/{x_pos};{axial_pos}/summary.txt
+/gate/output/summary/addCollection Singles
+/gate/output/summary/addCollection Coincidences
+/gate/output/summary/addCollection Delay
+

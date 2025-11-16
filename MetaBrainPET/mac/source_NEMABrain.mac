@@ -1,0 +1,72 @@
+/gate/source/addSource                                  Background
+/gate/source/Background/setActivity                     76253300 becquerel
+/gate/source/Background/gps/particle                    e+
+/gate/source/Background/gps/energytype                  Fluor18
+/gate/source/Background/setForcedUnstableFlag           true
+/gate/source/Background/setForcedHalfLife               6586 s
+/gate/source/Background/gps/type                        Volume
+/gate/source/Background/gps/shape                       Cylinder
+/gate/source/Background/gps/radius                      67.5 mm
+/gate/source/Background/gps/halfz                       51.5 mm
+/gate/source/Background/gps/angtype                     iso
+/gate/source/Background/gps/centre                      0.0 0.0 0.0 mm
+/gate/source/Background/gps/Forbid                      hot_rod_1
+/gate/source/Background/gps/Forbid                      hot_rod_2
+/gate/source/Background/gps/Forbid                      hot_rod_3
+/gate/source/Background/gps/Forbid                      hot_rod_4
+/gate/source/Background/gps/Forbid                      hot_rod_5
+/gate/source/Background/gps/Forbid                      hot_rod_6
+/gate/source/Background/dump 6
+
+
+/gate/source/addSource                                       hot_rod_source_1
+/gate/source/hot_rod_source_1/setActivity                    674340 becquerel
+/gate/source/hot_rod_source_1/gps/particle                   e+
+/gate/source/hot_rod_source_1/gps/energytype                 Fluor18
+/gate/source/hot_rod_source_1/setForcedUnstableFlag          true
+/gate/source/hot_rod_source_1/setForcedHalfLife              6586 s
+/gate/source/hot_rod_source_1/gps/type                       Volume
+/gate/source/hot_rod_source_1/gps/shape                      Cylinder
+/gate/source/hot_rod_source_1/gps/radius                     4.5 mm
+/gate/source/hot_rod_source_1/gps/halfz                      25 mm
+/gate/source/hot_rod_source_1/gps/angtype                    iso
+/gate/source/hot_rod_source_1/gps/centre                     35.0 0.0 28.0 mm
+
+/gate/source/addSource                                       hot_rod_source_2
+/gate/source/hot_rod_source_2/setActivity                    168580 becquerel
+/gate/source/hot_rod_source_2/gps/particle                   e+
+/gate/source/hot_rod_source_2/gps/energytype                 Fluor18
+/gate/source/hot_rod_source_2/setForcedUnstableFlag          true
+/gate/source/hot_rod_source_2/setForcedHalfLife              6586 s
+/gate/source/hot_rod_source_2/gps/type                       Volume
+/gate/source/hot_rod_source_2/gps/shape                      Cylinder
+/gate/source/hot_rod_source_2/gps/radius                     2.25 mm
+/gate/source/hot_rod_source_2/gps/halfz                      25 mm
+/gate/source/hot_rod_source_2/gps/angtype                    iso
+/gate/source/hot_rod_source_2/gps/centre                     17.5 30.31 28.0 mm
+
+/gate/source/addSource                                       hot_rod_source_4
+/gate/source/hot_rod_source_4/setActivity                    299700 becquerel
+/gate/source/hot_rod_source_4/gps/particle                   e+
+/gate/source/hot_rod_source_4/gps/energytype                 Fluor18
+/gate/source/hot_rod_source_4/setForcedUnstableFlag          true
+/gate/source/hot_rod_source_4/setForcedHalfLife              6586 s
+/gate/source/hot_rod_source_4/gps/type                       Volume
+/gate/source/hot_rod_source_4/gps/shape                      Cylinder
+/gate/source/hot_rod_source_4/gps/radius                     3.0 mm
+/gate/source/hot_rod_source_4/gps/halfz                      25 mm
+/gate/source/hot_rod_source_4/gps/angtype                    iso
+/gate/source/hot_rod_source_4/gps/centre                     -35.0 0.0 28.0 mm
+
+/gate/source/addSource                                       hot_rod_source_5
+/gate/source/hot_rod_source_5/setActivity                    1198830 becquerel
+/gate/source/hot_rod_source_5/gps/particle                   e+
+/gate/source/hot_rod_source_5/gps/energytype                 Fluor18
+/gate/source/hot_rod_source_5/setForcedUnstableFlag          true
+/gate/source/hot_rod_source_5/setForcedHalfLife              6586 s
+/gate/source/hot_rod_source_5/gps/type                       Volume
+/gate/source/hot_rod_source_5/gps/shape                      Cylinder
+/gate/source/hot_rod_source_5/gps/radius                     6.0 mm
+/gate/source/hot_rod_source_5/gps/halfz                      25 mm
+/gate/source/hot_rod_source_5/gps/angtype                    iso
+/gate/source/hot_rod_source_5/gps/centre                     -17.5 -30.31 28.0 mm

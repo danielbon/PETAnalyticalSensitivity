@@ -1,0 +1,26 @@
+###### lutetium-176 ion source  ###############
+# https://doi.org/10.1016/j.nimb.2019.06.001
+# Assuming an average massic 176Lu-activity 52.61±0.36 Bq/g (see https://doi.org/10.1016/j.apradiso.2013.11.071), we defined the intrinsic radioactivity of LYSO as 267 Bq/cm3.
+# This PET geometry has two concentric rings with 290 mm trans-axial diameter and 28.2 mm axial extension each one. 
+# The rings have a 1.2 mm separation between them, resulting in an axial extension of 57.6 mm. 
+# Each ring detector contains 30 modules with 8x8 crystal elements with a pitch of 3.6 mm in both directions.
+###############################################################
+/gate/source/addSource       Lu176 gps
+/gate/source/Lu176/gps/particle ion
+/gate/source/Lu176/gps/ion 71 176 0 0
+/gate/source/Lu176/gps/ene/type Mono
+/gate/source/Lu176/gps/ene/mono 0. keV
+/gate/source/Lu176/setForcedUnstableFlag true
+/gate/source/Lu176/useDefaultHalfLife
+/gate/source/Lu176/setActivity  184465 becquerel
+/gate/source/Lu176/gps/pos/type  Volume
+/gate/source/Lu176/gps/pos/shape Cylinder
+/gate/source/Lu176/gps/pos/radius 180 mm
+/gate/source/Lu176/gps/pos/inner_radius 144 mm
+/gate/source/Lu176/gps/pos/halfz 60 mm
+/gate/source/Lu176/gps/ang/type iso
+/gate/source/Lu176/gps/pos/centre 0.0 0.0 0.0 mm
+/gate/source/Lu176/gps/pos/confine crystal_phys
+/gate/source/Lu176/gps/Forbid box_phantom_phys
+#/gate/source/Lu176/attachTo crystal
+

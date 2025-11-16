@@ -1,0 +1,11 @@
+/gate/world/daughters/name box_phantom
+/gate/world/daughters/insert box
+/gate/box_phantom/geometry/setXLength 10. mm
+/gate/box_phantom/geometry/setYLength 10. mm
+/gate/box_phantom/geometry/setZLength 10. mm
+/gate/box_phantom/placement/setTranslation 0. 0. {axial_pos} mm
+/gate/box_phantom/vis/forceSolid
+/gate/box_phantom/setMaterial G4_PLEXIGLASS
+/gate/box_phantom/vis/setColor green
+# used to compute scatter counts
+/gate/box_phantom/attachPhantomSD

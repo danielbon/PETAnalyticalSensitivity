@@ -1,0 +1,87 @@
+#=====================================================
+# SOURCE
+#=====================================================
+
+/gate/source/addSource                                       upper_half_source
+/gate/source/upper_half_source/setActivity                   37000000 becquerel
+/gate/source/upper_half_source/gps/particle                  e+
+/gate/source/upper_half_source/gps/energytype                Fluor18
+/gate/source/upper_half_source/setForcedUnstableFlag         true
+/gate/source/upper_half_source/setForcedHalfLife             6586 s
+/gate/source/upper_half_source/gps/type                      Volume
+/gate/source/upper_half_source/gps/shape                     Cylinder
+/gate/source/upper_half_source/gps/radius                    15 mm
+/gate/source/upper_half_source/gps/halfz                     15 mm
+/gate/source/upper_half_source/gps/angtype                   iso
+/gate/source/upper_half_source/gps/centre                    0 0 10 mm
+/gate/source/upper_half_source/gps/Forbid                    first_hollow_cylinder
+/gate/source/upper_half_source/gps/Forbid                    second_hollow_cylinder
+
+/gate/source/addSource                                       hot_rod_source_1
+/gate/source/hot_rod_source_1/setActivity                    37000000 becquerel
+/gate/source/hot_rod_source_1/gps/particle                   e+
+/gate/source/hot_rod_source_1/gps/energytype                 Fluor18
+/gate/source/hot_rod_source_1/setForcedUnstableFlag          true
+/gate/source/hot_rod_source_1/setForcedHalfLife              6586 s
+/gate/source/hot_rod_source_1/gps/type                       Volume
+/gate/source/hot_rod_source_1/gps/shape                      Cylinder
+/gate/source/hot_rod_source_1/gps/radius                     0.5 mm
+/gate/source/hot_rod_source_1/gps/halfz                      10 mm
+/gate/source/hot_rod_source_1/gps/angtype                    iso
+/gate/source/hot_rod_source_1/gps/centre                     2.32 7.132 -15 mm
+
+/gate/source/addSource                                       hot_rod_source_2
+/gate/source/hot_rod_source_2/setActivity                    37000000 becquerel
+/gate/source/hot_rod_source_2/gps/particle                   e+
+/gate/source/hot_rod_source_2/gps/energytype                 Fluor18
+/gate/source/hot_rod_source_2/setForcedUnstableFlag          true
+/gate/source/hot_rod_source_2/setForcedHalfLife              6586 s
+/gate/source/hot_rod_source_2/gps/type                       Volume
+/gate/source/hot_rod_source_2/gps/shape                      Cylinder
+/gate/source/hot_rod_source_2/gps/radius                     1 mm
+/gate/source/hot_rod_source_2/gps/halfz                      10 mm
+/gate/source/hot_rod_source_2/gps/angtype                    iso
+/gate/source/hot_rod_source_2/gps/centre                     -4.41 6.067 -15 mm  
+
+/gate/source/addSource                                       hot_rod_source_3
+/gate/source/hot_rod_source_3/setActivity                    37000000 becquerel
+/gate/source/hot_rod_source_3/gps/particle                   e+
+/gate/source/hot_rod_source_3/gps/energytype                 Fluor18
+/gate/source/hot_rod_source_3/setForcedUnstableFlag          true
+/gate/source/hot_rod_source_3/setForcedHalfLife              6586 s
+/gate/source/hot_rod_source_3/gps/type                       Volume
+/gate/source/hot_rod_source_3/gps/shape                      Cylinder
+/gate/source/hot_rod_source_3/gps/radius                     1.5 mm
+/gate/source/hot_rod_source_3/gps/halfz                      10 mm
+/gate/source/hot_rod_source_3/gps/angtype                    iso
+/gate/source/hot_rod_source_3/gps/centre                     -7.5 0 -15 mm
+
+/gate/source/addSource                                       hot_rod_source_4
+/gate/source/hot_rod_source_4/setActivity                    37000000 becquerel
+/gate/source/hot_rod_source_4/gps/particle                   e+
+/gate/source/hot_rod_source_4/gps/energytype                 Fluor18
+/gate/source/hot_rod_source_4/setForcedUnstableFlag          true
+/gate/source/hot_rod_source_4/setForcedHalfLife              6586 s
+/gate/source/hot_rod_source_4/gps/type                       Volume
+/gate/source/hot_rod_source_4/gps/shape                      Cylinder
+/gate/source/hot_rod_source_4/gps/radius                     2 mm
+/gate/source/hot_rod_source_4/gps/halfz                      10 mm
+/gate/source/hot_rod_source_4/gps/angtype                    iso
+/gate/source/hot_rod_source_4/gps/centre                     -4.41 -6.067 -15 mm
+
+/gate/source/addSource                                       hot_rod_source_5
+/gate/source/hot_rod_source_5/setActivity                    37000000 becquerel
+/gate/source/hot_rod_source_5/gps/particle                   e+
+/gate/source/hot_rod_source_5/gps/energytype                 Fluor18
+/gate/source/hot_rod_source_5/setForcedUnstableFlag          true
+/gate/source/hot_rod_source_5/setForcedHalfLife              6586 s
+/gate/source/hot_rod_source_5/gps/type                       Volume
+/gate/source/hot_rod_source_5/gps/shape                      Cylinder
+/gate/source/hot_rod_source_5/gps/radius                     2.5 mm
+/gate/source/hot_rod_source_5/gps/halfz                      10 mm
+/gate/source/hot_rod_source_5/gps/angtype                    iso
+/gate/source/hot_rod_source_5/gps/centre                     2.32 -7.132 -15 mm
+
+
+#/gate/source/list
+

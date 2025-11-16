@@ -1,0 +1,48 @@
+#=================================================================
+# Brainweb P H A N T O M
+# 
+#=================================================================
+/gate/world/daughters/name                              Brain 
+#/gate/world/daughters/insert                      ImageRegularParametrisedVolume
+/gate/world/daughters/insert                            ImageNestedParametrisedVolume
+/gate/Brain/geometry/setImage                   input/subject04_crisp_v.mnc.mhd
+/gate/Brain/geometry/setRangeToMaterialFile     input/range_Brainweb.dat
+/gate/Brain/placement/setTranslation                    0. 0. 0. cm
+#/gate/Brain/placement/setRotationAxis                   1 0 0
+#/gate/Brain/placement/setRotationAngle                  90 deg
+#/gate/Brain/placement/setRotationAxis                   0 0 1
+#/gate/Brain/placement/setRotationAngle                  180 deg
+/gate/Brain/vis/forceWireframe 
+#/gate/Brain/setSkipEqualMaterials 0
+#/gate/Brain/attachVoxelPhantomSD
+#/gate/Brain/vis/setVisible 0
+
+#/gate/world/daughters/name                              Brain 
+#/gate/world/daughters/insert                            compressedMatrix 
+#/gate/Brain/geometry/insertReader                       image
+#/gate/Brain/imageReader/insertTranslator            range 
+#/gate/Brain/imageReader/rangeTranslator/readTable   input/range_Brainweb.dat
+#/gate/Brain/imageReader/rangeTranslator/describe    1 
+#/gate/Brain/imageReader/readFile                      input/subject04_crisp_v.mnc.h33
+#/gate/Brain/placement/setTranslation                    0. 0. 0. cm
+#/gate/Brain/placement/setRotationAxis                   1 0 0
+#/gate/Brain/placement/setRotationAngle                  90 deg
+#/gate/Brain/placement/setRotationAxis                   0 0 1
+#/gate/Brain/placement/setRotationAngle                  180 deg
+#/gate/Brain/vis/forceWireframe 
+#/gate/Brain/attachVoxelPhantomSD
+
+#/gate/world/daughters/name                              Brain
+#/gate/world/daughters/insert                            compressedMatrix 
+#/gate/Brain/geometry/insertReader                       interfile
+#/gate/Brain/interfileReader/insertTranslator            range 
+#/gate/Brain/interfileReader/rangeTranslator/readTable   input/range_Brainweb.dat
+#/gate/Brain/interfileReader/rangeTranslator/describe    1
+#/gate/Brain/interfileReader/readFile                    input/subject04_crisp_v.mnc.mhd
+#/gate/Brain/placement/setTranslation                    0. 0. 0. cm
+#/gate/Brain/placement/setRotationAxis                  1 0 0
+#/gate/Brain/placement/setRotationAngle                 270 deg
+#/gate/Brain/placement/setRotationAxis                  0 0 1
+#/gate/Brain/placement/setRotationAngle                 180 deg
+#/gate/Brain/vis/forceWireframe 
+#/gate/Brain/attachVoxelPhantomSD
